@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  if(user)
+    ul
+      li
+        img(src="#{user.photo}")
+      li  #{user.name}
+      li
+        a(href='logout') Exit
+  else
+    ul
+        a(href='auth/twitter') Login on Twitter
+    ul
+        a(href='auth/facebook') Login on Facebook
